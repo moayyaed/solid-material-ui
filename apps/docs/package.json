@@ -1,5 +1,5 @@
 {
-  "name": "@skclusive/docs",
+  "name": "solid-material-ui-docs",
   "version": "0.0.0",
   "description": "",
   "scripts": {
@@ -24,6 +24,7 @@
     "solid-transition-group": "0.0.8",
     "tslib": "^2.0.0",
     "vite-plugin-solid": "2.1.2",
-    "typeface-roboto": "1.1.13"
+    "typeface-roboto": "1.1.13",
+    "solid-material-ui": "*"
   }
 }
