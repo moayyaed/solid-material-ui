@@ -1,11 +1,13 @@
-export * from "./Component";
+export * from "./types";
 
 export * from "./keys";
-
-export * from "./toCSS";
 
 export * from "./toClass";
 
 export * from "./toStyle";
+
+export * from "./useCSS";
+
+export * from "./useParams";
 
 export * from "./useStyles";

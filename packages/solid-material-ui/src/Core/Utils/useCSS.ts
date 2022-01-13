@@ -8,7 +8,7 @@ export interface ICSSArgs {
 
 export type IClassLimitedArgs = Omit<IClassArgs, "selector" | "extendor"> & { section?: string };
 
-export function toCSS(
+export function useCSS(
     args: ICSSArgs
 ): { toClass: (args: IClassLimitedArgs) => () => string, toStyle: typeof toStyle } {
     return {
