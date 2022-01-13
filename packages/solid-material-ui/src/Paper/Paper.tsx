@@ -44,10 +44,14 @@ export function Paper(props: IPaperProps): JSX.Element {
   const [params, others] = useParams(props, defaults);
   const { toClass, toStyle } = useCSS(params);
 
+  const _disabled = () => params.disabled ?? componentContext?.disabled;
+
+  const _component = () => params.component;
+
   const _class = toClass({
     *append() {
       yield "Root";
-      if (params.disabled) yield "Disabled";
+      if (_disabled()) yield "Disabled";
       yield `Elevation-${params.elevation}`;
       if (!params.square) yield "Rounded";
     },
@@ -69,8 +73,8 @@ export function Paper(props: IPaperProps): JSX.Element {
     <Dynamic
       {...others}
       ref={params.ref}
-      component={params.component}
-      disabled={params.disabled}
+      component={_component()}
+      disabled={_disabled()}
       class={_class()}
       style={_style()}
       children={params.children}

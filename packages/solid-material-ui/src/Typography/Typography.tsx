@@ -76,14 +76,16 @@ export function Typography(props: ITypographyProps): JSX.Element {
   const [params, others] = useParams(props, defaults);
   const { toClass, toStyle } = useCSS(params);
 
-  const component = () =>
-    params?.component ??
+  const _disabled = () => params.disabled ?? componentContext?.disabled;
+
+  const _component = () =>
+    params.component ??
     (params.paragraph ? "p" : mappings[params.variant!] ?? "span");
 
   const _class = toClass({
     *append() {
       yield "Root";
-      if (params.disabled) yield "Disabled";
+      if (_disabled()) yield "Disabled";
       if (params.variant !== TypographyVariant.Inherit)
         yield `${params.variant}`;
       if (params.color !== Color.Initial) yield `Color-${params.color}`;
@@ -111,12 +113,11 @@ export function Typography(props: ITypographyProps): JSX.Element {
     <Dynamic
       {...others}
       ref={params.ref}
-      component={component()}
-      disabled={params.disabled}
+      component={_component()}
+      disabled={_disabled}
       class={_class()}
       style={_style()}
-    >
-      {params.children}
-    </Dynamic>
+      children={params.children}
+    />
   );
 }
