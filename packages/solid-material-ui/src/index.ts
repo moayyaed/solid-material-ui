@@ -2,6 +2,8 @@ export * from "./AppBar";
 
 export * from "./Avatar";
 
+export * from "./Badge";
+
 export * from "./Baseline";
 
 export * from "./Core";

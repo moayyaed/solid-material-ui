@@ -5,6 +5,7 @@ import { ThemeToggler } from "./ThemeToggler";
 import { PaperSample } from "./PaperSample";
 import { AvatarSample } from "./AvatarSample";
 import { AppBarSample } from "./AppBarSample";
+import { BadgeSample } from "./BadgeSample";
 import { HiddenSample } from "./HiddenSample";
 
 const styles = useStyles({
@@ -25,6 +26,7 @@ export function MaterialSamples(): JSX.Element {
       <ThemeToggler />
       <PaperSample />
       <AvatarSample />
+      <BadgeSample />
       <AppBarSample />
       <HiddenSample />
     </div>
