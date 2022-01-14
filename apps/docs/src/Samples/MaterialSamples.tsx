@@ -1,7 +1,9 @@
 import { JSX } from "solid-js";
+import { useStyles } from "solid-material-ui";
+
 import { ThemeToggler } from "./ThemeToggler";
 import { PaperSample } from "./PaperSample";
-import { useStyles } from "solid-material-ui";
+import { AppBarSample } from "./AppBarSample";
 
 const styles = useStyles({
   container: `
@@ -20,6 +22,7 @@ export function MaterialSamples(): JSX.Element {
       <div>Material UI Sample Holder</div>
       <ThemeToggler />
       <PaperSample />
+      <AppBarSample />
     </div>
   );
 }
