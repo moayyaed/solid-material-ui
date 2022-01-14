@@ -6,6 +6,7 @@ import { PaperSample } from "./PaperSample";
 import { AvatarSample } from "./AvatarSample";
 import { AppBarSample } from "./AppBarSample";
 import { BadgeSample } from "./BadgeSample";
+import { ButtonSample } from "./ButtonSample";
 import { HiddenSample } from "./HiddenSample";
 
 const styles = useStyles({
@@ -28,6 +29,7 @@ export function MaterialSamples(): JSX.Element {
       <AvatarSample />
       <BadgeSample />
       <AppBarSample />
+      <ButtonSample />
       <HiddenSample />
     </div>
   );

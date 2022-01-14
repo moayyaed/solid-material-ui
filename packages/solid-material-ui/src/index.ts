@@ -6,6 +6,8 @@ export * from "./Badge";
 
 export * from "./Baseline";
 
+export * from "./Button";
+
 export * from "./Core";
 
 export * from "./Grid";
