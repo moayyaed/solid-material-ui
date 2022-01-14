@@ -3,6 +3,7 @@ import { useStyles } from "solid-material-ui";
 
 import { ThemeToggler } from "./ThemeToggler";
 import { PaperSample } from "./PaperSample";
+import { AvatarSample } from "./AvatarSample";
 import { AppBarSample } from "./AppBarSample";
 import { HiddenSample } from "./HiddenSample";
 
@@ -23,6 +24,7 @@ export function MaterialSamples(): JSX.Element {
       <div>Material UI Sample Holder</div>
       <ThemeToggler />
       <PaperSample />
+      <AvatarSample />
       <AppBarSample />
       <HiddenSample />
     </div>

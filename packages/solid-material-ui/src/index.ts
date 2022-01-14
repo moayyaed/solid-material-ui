@@ -1,8 +1,12 @@
 export * from "./AppBar";
 
+export * from "./Avatar";
+
 export * from "./Baseline";
 
 export * from "./Core";
+
+export * from "./Grid";
 
 export * from "./Hidden";
 
