@@ -4,6 +4,8 @@ export * from "./Baseline";
 
 export * from "./Core";
 
+export * from "./Hidden";
+
 export * from "./Icons";
 
 export * from "./Paper";

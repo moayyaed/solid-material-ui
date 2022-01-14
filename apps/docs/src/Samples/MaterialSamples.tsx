@@ -4,6 +4,7 @@ import { useStyles } from "solid-material-ui";
 import { ThemeToggler } from "./ThemeToggler";
 import { PaperSample } from "./PaperSample";
 import { AppBarSample } from "./AppBarSample";
+import { HiddenSample } from "./HiddenSample";
 
 const styles = useStyles({
   container: `
@@ -23,6 +24,7 @@ export function MaterialSamples(): JSX.Element {
       <ThemeToggler />
       <PaperSample />
       <AppBarSample />
+      <HiddenSample />
     </div>
   );
 }
