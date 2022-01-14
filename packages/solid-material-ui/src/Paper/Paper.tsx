@@ -4,7 +4,7 @@ import { Dynamic } from "solid-js/web";
 
 import type { IComponentBaseProps, Optional } from "../Core";
 
-import { useComponentContext, useCSS, useParams } from "../Core";
+import { useComponentContext, useCSS, useProps } from "../Core";
 
 import "./PaperStyle";
 
@@ -39,32 +39,32 @@ const defaults: IPaperArguments = {
   children: undefined,
 };
 
-export function Paper(props: IPaperProps): JSX.Element {
+export function Paper(args: IPaperProps): JSX.Element {
   const componentContext = useComponentContext();
-  const [params, others] = useParams(props, defaults);
-  const { toClass, toStyle } = useCSS(params);
+  const [props, others] = useProps(args, defaults);
+  const { toClass, toStyle } = useCSS(props);
 
-  const _disabled = () => params.disabled ?? componentContext?.disabled;
+  const _disabled = () => props.disabled ?? componentContext?.disabled;
 
-  const _component = () => params.component;
+  const _component = () => props.component;
 
   const _class = toClass({
     *append() {
       yield "Root";
       if (_disabled()) yield "Disabled";
-      yield `Elevation-${params.elevation}`;
-      if (!params.square) yield "Rounded";
+      yield `Elevation-${props.elevation}`;
+      if (!props.square) yield "Rounded";
     },
     *class() {
-      yield params.class;
-      yield params.className;
+      yield props.class;
+      yield props.className;
       yield componentContext?.class;
     },
   });
 
   const _style = toStyle({
     *style() {
-      yield params.style;
+      yield props.style;
       yield componentContext?.style;
     },
   });
@@ -72,12 +72,12 @@ export function Paper(props: IPaperProps): JSX.Element {
   return (
     <Dynamic
       {...others}
-      ref={params.ref}
+      ref={props.ref}
       component={_component()}
       disabled={_disabled()}
       class={_class()}
       style={_style()}
-      children={params.children}
+      children={props.children}
     />
   );
 }

@@ -8,6 +8,6 @@ export * from "./toStyle";
 
 export * from "./useCSS";
 
-export * from "./useParams";
+export * from "./useProps";
 
 export * from "./useStyles";
