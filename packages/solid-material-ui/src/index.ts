@@ -12,6 +12,8 @@ export * from "./Container";
 
 export * from "./Core";
 
+export * from "./Divider";
+
 export * from "./Grid";
 
 export * from "./Hidden";

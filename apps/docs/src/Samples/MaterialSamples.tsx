@@ -1,5 +1,13 @@
 import { JSX } from "solid-js";
-import { useStyles } from "solid-material-ui";
+import {
+  Container,
+  Direction,
+  Divider,
+  Grid,
+  GridSize,
+  Spacing,
+  useStyles,
+} from "solid-material-ui";
 
 import { ThemeToggler } from "./ThemeToggler";
 import { PaperSample } from "./PaperSample";
@@ -18,19 +26,31 @@ const styles = useStyles({
         margin-top: 16px;
       }
     `,
+  spaced: `
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+  `,
 });
 
 export function MaterialSamples(): JSX.Element {
   return (
-    <div class={styles.container}>
+    <Container class={styles.container}>
       <div>Material UI Sample Holder</div>
       <ThemeToggler />
+      <Divider class={styles.spaced} light />
       <PaperSample />
+      <Divider class={styles.spaced} light />
       <AvatarSample />
+      <Divider class={styles.spaced} light />
       <BadgeSample />
+      <Divider class={styles.spaced} light />
       <AppBarSample />
+      <Divider class={styles.spaced} light />
       <ButtonSample />
+      <Divider class={styles.spaced} light />
       <HiddenSample />
-    </div>
+      <Divider class={styles.spaced} light />
+    </Container>
   );
 }
