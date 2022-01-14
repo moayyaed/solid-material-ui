@@ -8,6 +8,8 @@ export * from "./Baseline";
 
 export * from "./Button";
 
+export * from "./Container";
+
 export * from "./Core";
 
 export * from "./Grid";
