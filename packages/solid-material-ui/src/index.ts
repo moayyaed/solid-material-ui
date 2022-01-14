@@ -6,6 +6,8 @@ export * from "./Core";
 
 export * from "./Paper";
 
+export * from "./SvgIcon";
+
 export * from "./Theme";
 
 export * from "./Toolbar";
