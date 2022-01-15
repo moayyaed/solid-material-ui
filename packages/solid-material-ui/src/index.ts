@@ -1,3 +1,5 @@
+export * from "./Alert";
+
 export * from "./AppBar";
 
 export * from "./Avatar";

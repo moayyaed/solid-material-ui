@@ -19,6 +19,7 @@ import { CardSample } from "./CardSample";
 import { ListSample } from "./ListSample";
 import { TableSample } from "./TableSample";
 import { HiddenSample } from "./HiddenSample";
+import { AlertSample } from "./AlertSample";
 
 const styles = useStyles({
   container: `
@@ -80,6 +81,9 @@ export function MaterialSamples(): JSX.Element {
       <Divider class={styles.spaced} light />
 
       <HiddenSample />
+      <Divider class={styles.spaced} light />
+
+      <AlertSample />
       <Divider class={styles.spaced} light />
     </Container>
   );
