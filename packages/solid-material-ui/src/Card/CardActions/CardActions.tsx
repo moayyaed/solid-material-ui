@@ -49,7 +49,7 @@ export function CardActions(args: ICardActionsProps): JSX.Element {
   const _class = toClass({
     *append() {
       yield "Root";
-      if (props.disabled) yield "Disabled";
+      if (_disabled()) yield "Disabled";
       if (!props.disableSpacing) yield "Spacing";
     },
     *class() {

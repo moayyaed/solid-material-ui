@@ -17,6 +17,7 @@ import { BadgeSample } from "./BadgeSample";
 import { ButtonSample } from "./ButtonSample";
 import { CardSample } from "./CardSample";
 import { ListSample } from "./ListSample";
+import { TableSample } from "./TableSample";
 import { HiddenSample } from "./HiddenSample";
 
 const styles = useStyles({
@@ -73,6 +74,9 @@ export function MaterialSamples(): JSX.Element {
       <Divider class={styles.spaced} light />
 
       <ButtonSample />
+      <Divider class={styles.spaced} light />
+
+      <TableSample />
       <Divider class={styles.spaced} light />
 
       <HiddenSample />

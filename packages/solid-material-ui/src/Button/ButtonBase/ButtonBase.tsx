@@ -113,7 +113,7 @@ export function ButtonBase(args: IButtonBaseProps): JSX.Element {
   const _class = toClass({
     *append() {
       yield "Root";
-      if (props.disabled) yield "Disabled";
+      if (_disabled()) yield "Disabled";
       if (props.focusVisible) {
         yield "FocusVisible";
         yield `~${props.focusVisibleClass}`;

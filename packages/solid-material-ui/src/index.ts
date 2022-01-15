@@ -28,6 +28,8 @@ export * from "./Paper";
 
 export * from "./SvgIcon";
 
+export * from "./Table";
+
 export * from "./Theme";
 
 export * from "./Toolbar";

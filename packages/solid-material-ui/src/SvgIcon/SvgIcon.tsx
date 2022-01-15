@@ -63,7 +63,7 @@ export function SvgIcon(args: ISvgIconProps): JSX.Element {
   const _class = toClass({
     *append() {
       yield "Root";
-      if (props.disabled) yield "Disabled";
+      if (_disabled()) yield "Disabled";
       if (props.color !== Color.Inherit) yield `Color-${props.color}`;
       if (props.fontSize !== FontSize.Default)
         yield `FontSize-${props.fontSize}`;
