@@ -1,32 +1,33 @@
 import type { JSX } from "solid-js";
 
-import { Dynamic } from "solid-js/web";
+import type { IComponentBaseProps, Optional } from "../../Core";
 
-import type { IComponentBaseProps, Optional } from "../Core";
+import { useComponentContext, useCSS, useProps } from "../../Core";
 
-import { useComponentContext, useCSS, useProps } from "../Core";
+import { Paper } from "../../Paper";
 
-import "./PaperStyle";
+import "./CardStyle";
 
-interface IPaperOptional extends IComponentBaseProps {
-  elevation: number;
+interface ICardOptional extends IComponentBaseProps {
+  elevatoin: number;
   square: boolean;
+  raised: boolean;
 }
 
-interface IPaperRequired {
+interface ICardRequired {
   children: JSX.Element;
 }
 
-type IPaperAttributes = Omit<JSX.HTMLAttributes<HTMLDivElement>, "children">;
+type ICardAttributes = Omit<JSX.HTMLAttributes<HTMLDivElement>, "children">;
 
-type IPaperArguments = Optional<IPaperOptional> & Optional<IPaperRequired>;
+type ICardArguments = Optional<ICardOptional> & Optional<ICardRequired>;
 
-export type IPaperProps = Partial<Optional<IPaperOptional>> &
-  IPaperRequired &
-  IPaperAttributes;
+export type ICardProps = Partial<Optional<ICardOptional>> &
+  ICardRequired &
+  ICardAttributes;
 
-const defaults: IPaperArguments = {
-  selector: "Paper",
+const defaults: ICardArguments = {
+  selector: "Card",
   extendor: undefined,
   ref: undefined,
   className: undefined,
@@ -34,12 +35,13 @@ const defaults: IPaperArguments = {
   class: undefined,
   style: undefined,
   component: "div",
-  elevation: 1,
+  elevatoin: 1,
   square: undefined,
+  raised: undefined,
   children: undefined,
 };
 
-export function Paper(args: IPaperProps): JSX.Element {
+export function Card(args: ICardProps): JSX.Element {
   const componentContext = useComponentContext();
   const [props, others] = useProps(args, defaults);
   const { toClass, toStyle } = useCSS(props);
@@ -48,12 +50,12 @@ export function Paper(args: IPaperProps): JSX.Element {
 
   const _component = () => props.component;
 
+  const _elevation = () => (props.raised ? 8 : props.elevatoin);
+
   const _class = toClass({
     *append() {
       yield "Root";
       if (_disabled()) yield "Disabled";
-      yield `Elevation-${props.elevation}`;
-      if (!props.square) yield "Rounded";
     },
     *class() {
       yield props.class;
@@ -70,14 +72,17 @@ export function Paper(args: IPaperProps): JSX.Element {
   });
 
   return (
-    <Dynamic
+    <Paper
       {...others}
       ref={props.ref}
       component={_component()}
       disabled={_disabled()}
       class={_class()}
       style={_style()}
-      children={props.children}
-    />
+      elevation={_elevation()}
+      square={props.square}
+    >
+      {props.children}
+    </Paper>
   );
 }

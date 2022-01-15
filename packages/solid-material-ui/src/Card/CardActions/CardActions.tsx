@@ -2,31 +2,30 @@ import type { JSX } from "solid-js";
 
 import { Dynamic } from "solid-js/web";
 
-import type { IComponentBaseProps, Optional } from "../Core";
+import type { IComponentBaseProps, Optional } from "../../Core";
 
-import { useComponentContext, useCSS, useProps } from "../Core";
+import { useComponentContext, useCSS, useProps } from "../../Core";
 
-import "./PaperStyle";
+import "./CardActionsStyle";
 
-interface IPaperOptional extends IComponentBaseProps {
-  elevation: number;
-  square: boolean;
+interface ICardActionsOptional extends IComponentBaseProps {
+  disableSpacing: boolean;
 }
 
-interface IPaperRequired {
+interface ICardActionsRequired {
   children: JSX.Element;
 }
 
-type IPaperAttributes = Omit<JSX.HTMLAttributes<HTMLDivElement>, "children">;
+type ICardActionsAttributes = Omit<JSX.HTMLAttributes<HTMLDivElement>, "children">;
 
-type IPaperArguments = Optional<IPaperOptional> & Optional<IPaperRequired>;
+type ICardActionsArguments = Optional<ICardActionsOptional> & Optional<ICardActionsRequired>;
 
-export type IPaperProps = Partial<Optional<IPaperOptional>> &
-  IPaperRequired &
-  IPaperAttributes;
+export type ICardActionsProps = Partial<Optional<ICardActionsOptional>> &
+  ICardActionsRequired &
+  ICardActionsAttributes;
 
-const defaults: IPaperArguments = {
-  selector: "Paper",
+const defaults: ICardActionsArguments = {
+  selector: "CardActions",
   extendor: undefined,
   ref: undefined,
   className: undefined,
@@ -34,12 +33,11 @@ const defaults: IPaperArguments = {
   class: undefined,
   style: undefined,
   component: "div",
-  elevation: 1,
-  square: undefined,
+  disableSpacing: undefined,
   children: undefined,
 };
 
-export function Paper(args: IPaperProps): JSX.Element {
+export function CardActions(args: ICardActionsProps): JSX.Element {
   const componentContext = useComponentContext();
   const [props, others] = useProps(args, defaults);
   const { toClass, toStyle } = useCSS(props);
@@ -51,9 +49,8 @@ export function Paper(args: IPaperProps): JSX.Element {
   const _class = toClass({
     *append() {
       yield "Root";
-      if (_disabled()) yield "Disabled";
-      yield `Elevation-${props.elevation}`;
-      if (!props.square) yield "Rounded";
+      if (props.disabled) yield "Disabled";
+      if (!props.disableSpacing) yield "Spacing";
     },
     *class() {
       yield props.class;
@@ -77,7 +74,8 @@ export function Paper(args: IPaperProps): JSX.Element {
       disabled={_disabled()}
       class={_class()}
       style={_style()}
-      children={props.children}
-    />
+    >
+      {props.children}
+    </Dynamic>
   );
 }
