@@ -30,6 +30,8 @@ export * from "./List";
 
 export * from "./Paper";
 
+export * from "./Progress";
+
 export * from "./SvgIcon";
 
 export * from "./Table";
@@ -37,5 +39,7 @@ export * from "./Table";
 export * from "./Theme";
 
 export * from "./Toolbar";
+
+export * from "./Transition";
 
 export * from "./Typography";

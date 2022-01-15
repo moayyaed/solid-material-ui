@@ -20,6 +20,8 @@ import { ListSample } from "./ListSample";
 import { TableSample } from "./TableSample";
 import { HiddenSample } from "./HiddenSample";
 import { AlertSample } from "./AlertSample";
+import { ProgressSample } from "./ProgressSample";
+import { TransitionSample } from "./TransitionSample";
 
 const styles = useStyles({
   container: `
@@ -75,6 +77,12 @@ export function MaterialSamples(): JSX.Element {
       <Divider class={styles.spaced} light />
 
       <ButtonSample />
+      <Divider class={styles.spaced} light />
+
+      <ProgressSample />
+      <Divider class={styles.spaced} light />
+
+      <TransitionSample />
       <Divider class={styles.spaced} light />
 
       <TableSample />
