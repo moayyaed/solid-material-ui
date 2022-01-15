@@ -18,6 +18,8 @@ export * from "./Core";
 
 export * from "./Divider";
 
+export * from "./Form";
+
 export * from "./Grid";
 
 export * from "./Hidden";
