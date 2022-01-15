@@ -16,6 +16,7 @@ import { AppBarSample } from "./AppBarSample";
 import { BadgeSample } from "./BadgeSample";
 import { ButtonSample } from "./ButtonSample";
 import { CardSample } from "./CardSample";
+import { ListSample } from "./ListSample";
 import { HiddenSample } from "./HiddenSample";
 
 const styles = useStyles({
@@ -40,18 +41,40 @@ export function MaterialSamples(): JSX.Element {
       <div>Material UI Sample Holder</div>
       <ThemeToggler />
       <Divider class={styles.spaced} light />
+
       <PaperSample />
       <Divider class={styles.spaced} light />
+
       <AvatarSample />
       <Divider class={styles.spaced} light />
+
       <BadgeSample />
       <Divider class={styles.spaced} light />
-      <AppBarSample />
+
+      <Grid container spacing={Spacing.Three}>
+        <Grid item extraSmall={GridSize.Six}>
+          <CardSample />
+        </Grid>
+        <Grid
+          item
+          container
+          extraSmall={GridSize.Six}
+          direction={Direction.Column}
+          spacing={Spacing.Four}
+        >
+          <Grid item>
+            <ListSample />
+          </Grid>
+          <Grid item>
+            <AppBarSample />
+          </Grid>
+        </Grid>
+      </Grid>
       <Divider class={styles.spaced} light />
+
       <ButtonSample />
       <Divider class={styles.spaced} light />
-      <CardSample />
-      <Divider class={styles.spaced} light />
+
       <HiddenSample />
       <Divider class={styles.spaced} light />
     </Container>
