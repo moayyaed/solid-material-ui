@@ -22,6 +22,7 @@ import { HiddenSample } from "./HiddenSample";
 import { AlertSample } from "./AlertSample";
 import { ProgressSample } from "./ProgressSample";
 import { TransitionSample } from "./TransitionSample";
+import { ModalSample } from "./ModalSample";
 
 const styles = useStyles({
   container: `
@@ -42,10 +43,6 @@ const styles = useStyles({
 export function MaterialSamples(): JSX.Element {
   return (
     <Container class={styles.container}>
-      <div>Material UI Sample Holder</div>
-      <ThemeToggler />
-      <Divider class={styles.spaced} light />
-
       <PaperSample />
       <Divider class={styles.spaced} light />
 
@@ -83,6 +80,9 @@ export function MaterialSamples(): JSX.Element {
       <Divider class={styles.spaced} light />
 
       <TransitionSample />
+      <Divider class={styles.spaced} light />
+
+      <ModalSample />
       <Divider class={styles.spaced} light />
 
       <TableSample />

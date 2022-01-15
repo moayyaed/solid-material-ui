@@ -28,6 +28,8 @@ export * from "./Link";
 
 export * from "./List";
 
+export * from "./Modal";
+
 export * from "./Paper";
 
 export * from "./Portal";
