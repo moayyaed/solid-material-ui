@@ -30,6 +30,8 @@ export * from "./List";
 
 export * from "./Paper";
 
+export * from "./Portal";
+
 export * from "./Progress";
 
 export * from "./SvgIcon";
