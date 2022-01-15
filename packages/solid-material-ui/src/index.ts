@@ -24,6 +24,8 @@ export * from "./Hidden";
 
 export * from "./Icons";
 
+export * from "./Link";
+
 export * from "./List";
 
 export * from "./Paper";
