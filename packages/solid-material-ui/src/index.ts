@@ -42,6 +42,8 @@ export * from "./Portal";
 
 export * from "./Progress";
 
+export * from "./Selection";
+
 export * from "./SvgIcon";
 
 export * from "./Table";

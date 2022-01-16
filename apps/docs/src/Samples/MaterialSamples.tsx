@@ -28,6 +28,9 @@ import { TextFieldOutlinedSample } from "./TextFieldOutlinedSample";
 import { TextFieldFilledSample } from "./TextFieldFilledSample";
 import { DialogSample } from "./DialogSample";
 import { GridSample } from "./GridSample";
+import { SwitchSample } from "./SwitchSample";
+import { CheckboxSample } from "./CheckboxSample";
+import { RadioSample } from "./RadioSample";
 
 const styles = useStyles({
   container: `
@@ -50,11 +53,13 @@ export function MaterialSamples(): JSX.Element {
     <Container class={styles.container}>
       <PaperSample />
       <Divider class={styles.spaced} light />
-
-      <AvatarSample />
+      <GridSample />
       <Divider class={styles.spaced} light />
-
-      <BadgeSample />
+      <HiddenSample />
+      <Divider class={styles.spaced} light />
+      <ProgressSample />
+      <Divider class={styles.spaced} light />
+      <ButtonSample />
       <Divider class={styles.spaced} light />
 
       <Grid container spacing={Spacing.Three}>
@@ -78,13 +83,26 @@ export function MaterialSamples(): JSX.Element {
       </Grid>
       <Divider class={styles.spaced} light />
 
-      <GridSample />
-      <Divider class={styles.spaced} light />
-
-      <ButtonSample />
-      <Divider class={styles.spaced} light />
-
-      <ProgressSample />
+      <Grid container spacing={Spacing.Three}>
+        <Grid item extraSmall={GridSize.Three}>
+          <AvatarSample />
+        </Grid>
+        <Grid item extraSmall={GridSize.Two}>
+          <BadgeSample />
+        </Grid>
+        {/* <Grid item extraSmall={GridSize.Two}>
+        <SvgIconSample />
+      </Grid> */}
+        <Grid item extraSmall={GridSize.Two}>
+          <SwitchSample />
+        </Grid>
+        <Grid item extraSmall={GridSize.Two}>
+          <CheckboxSample />
+        </Grid>
+        <Grid item extraSmall={GridSize.Three}>
+          <RadioSample />
+        </Grid>
+      </Grid>
       <Divider class={styles.spaced} light />
 
       <TextFieldSample />
@@ -106,9 +124,6 @@ export function MaterialSamples(): JSX.Element {
       <Divider class={styles.spaced} light />
 
       <TableSample />
-      <Divider class={styles.spaced} light />
-
-      <HiddenSample />
       <Divider class={styles.spaced} light />
 
       <AlertSample />
