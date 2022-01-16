@@ -26,6 +26,7 @@ import { ModalSample } from "./ModalSample";
 import { TextFieldSample } from "./TextFieldSample";
 import { TextFieldOutlinedSample } from "./TextFieldOutlinedSample";
 import { TextFieldFilledSample } from "./TextFieldFilledSample";
+import { DialogSample } from "./DialogSample";
 
 const styles = useStyles({
   container: `
@@ -95,6 +96,9 @@ export function MaterialSamples(): JSX.Element {
       <Divider class={styles.spaced} light />
 
       <ModalSample />
+      <Divider class={styles.spaced} light />
+
+      <DialogSample />
       <Divider class={styles.spaced} light />
 
       <TableSample />

@@ -16,6 +16,8 @@ export * from "./Container";
 
 export * from "./Core";
 
+export * from "./Dialog";
+
 export * from "./Divider";
 
 export * from "./Form";
