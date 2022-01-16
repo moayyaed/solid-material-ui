@@ -13,15 +13,15 @@ import { FormControlContext, IFormControlContext } from "./FormControlContext";
 import "./FormControlStyle";
 
 interface IFormControlOptional extends IComponentBaseProps {
-  filled: boolean | undefined;
-  focused: boolean | undefined;
-  required: boolean | undefined;
-  error: boolean | undefined;
-  hiddenLabel: boolean | undefined;
-  margin: Margin | undefined;
-  variant: ControlVariant | undefined;
-  hasStartAdornment: boolean | undefined;
-  hasEndAdornment: boolean | undefined;
+  filled: boolean;
+  focused: boolean;
+  required: boolean;
+  error: boolean;
+  hiddenLabel: boolean;
+  margin: Margin;
+  variant: ControlVariant;
+  hasStartAdornment: boolean;
+  hasEndAdornment: boolean;
   fullWidth: boolean;
 }
 

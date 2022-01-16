@@ -23,6 +23,9 @@ import { AlertSample } from "./AlertSample";
 import { ProgressSample } from "./ProgressSample";
 import { TransitionSample } from "./TransitionSample";
 import { ModalSample } from "./ModalSample";
+import { TextFieldSample } from "./TextFieldSample";
+import { TextFieldOutlinedSample } from "./TextFieldOutlinedSample";
+import { TextFieldFilledSample } from "./TextFieldFilledSample";
 
 const styles = useStyles({
   container: `
@@ -77,6 +80,15 @@ export function MaterialSamples(): JSX.Element {
       <Divider class={styles.spaced} light />
 
       <ProgressSample />
+      <Divider class={styles.spaced} light />
+
+      <TextFieldSample />
+      <Divider class={styles.spaced} light />
+
+      <TextFieldOutlinedSample />
+      <Divider class={styles.spaced} light />
+
+      <TextFieldFilledSample />
       <Divider class={styles.spaced} light />
 
       <TransitionSample />

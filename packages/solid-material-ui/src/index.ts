@@ -26,6 +26,8 @@ export * from "./Hidden";
 
 export * from "./Icons";
 
+export * from "./Input";
+
 export * from "./Link";
 
 export * from "./List";
@@ -41,6 +43,8 @@ export * from "./Progress";
 export * from "./SvgIcon";
 
 export * from "./Table";
+
+export * from "./TextField";
 
 export * from "./Theme";
 
