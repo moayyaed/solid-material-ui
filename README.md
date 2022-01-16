@@ -1,10 +1,14 @@
 # solid-material-ui
 
-Turbo Mono-repository is used for component package and docs app
-
 solid material ui port (porting from blazor port)
 
-Following are the target.
+In preparation for [solid hack](https://hack.solidjs.com/)
+
+Turbo Mono-repository is used for component package and docs app
+
+Current work in progress Solid samples hosted at [Solid Material UI Samples](https://skclusive.github.io/solid-material-ui/)
+
+## Following are the target.
 
 Port blazor material components at [Skclusive.Material.Component](https://github.com/skclusive/Skclusive.Material.Component) to solid
 
