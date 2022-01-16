@@ -27,6 +27,7 @@ import { TextFieldSample } from "./TextFieldSample";
 import { TextFieldOutlinedSample } from "./TextFieldOutlinedSample";
 import { TextFieldFilledSample } from "./TextFieldFilledSample";
 import { DialogSample } from "./DialogSample";
+import { GridSample } from "./GridSample";
 
 const styles = useStyles({
   container: `
@@ -75,6 +76,9 @@ export function MaterialSamples(): JSX.Element {
           </Grid>
         </Grid>
       </Grid>
+      <Divider class={styles.spaced} light />
+
+      <GridSample />
       <Divider class={styles.spaced} light />
 
       <ButtonSample />
